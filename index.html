@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classic restaurant</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<!--start header-->
+<header class="header">
+    <!--start navbar-->
+    <div class="header_container">
+        <div class="navbar">
+            <div class="navbar_wrapper">
+                <ul class="navbar_menu">
+                    <div class="navbar_img">
+                        <img src="images/open.jpg" alt="">
+                    </div>
+                    <li class="navbar_menu_item">
+                        <a class="navbar_menu_link--active" href="#">home</a>
+                    </li>
+                    <li class="navbar_menu_item">
+                        <a class="navbar_menu_link" href="#contact">contact us</a>
+                    </li>
+                    <li class="navbar_menu_item">
+                        <a class="navbar_menu_link" href="#about">about us</a>
+                    </li>
+                    <li class="navbar_menu_item">
+                        <a class="navbar_menu_link" href="#services">services</a>
+                    </li>
+                    <li class="navbar_menu_item">
+                        <a class="navbar_menu_link">reservation</a>
+                    </li>
+                </ul>
+                <div class="nav_bar">
+                    <span class="fa fa-bars nav_icon"></span>
+                </div>
+            </div>
+        </div>
+        <!--end navbar-->
+        <div class="brand">
+            <a href="#" class="logo">
+                <img src="images/logo.png">
+            </a>
+            <div class="logo_name">
+                <h1>Classic restaurant</h1>
+            </div>
+        </div>
+        <div class="banner_heading">
+            <h3 class="banner_main">welcome</h3>
+            <h5 class="banner_sub">to my restaurant</h5>
+        </div>
+    </div>
+    <div class="header_btn">
+        <button type="button">Reservation</button>
+    </div>
+</header>
+<!--end header-->
+<!--start main-->
+<main class="main" id="about">
+    <div class="main_container">
+        <!--start contact us-->
+        <div class="about_us">
+            <div class="about_us_left">
+                <h3>about us</h3>
+                <h5>Offering the best services by a classic restaurant </h5>
+                <p>
+                    If you are hungry, come in!
+                    <br>
+
+                    The best memories are shared.
+                    <br>
+                    Five star flavor for everyone.
+                    <br>
+                    Where food meets the soul.
+                    <br>
+                    Taste the flavors.
+                </p>
+            </div>
+            <div class="about_us_right">
+                <img src="images/about.png" alt="about-us">
+            </div>
+        </div>
+    </div>
+    <!--end contact us-->
+    <!--start gallery-->
+    <div class="gallery" id="services">
+        <div class="gallery_wrapper">
+            <div class="gallery_card">
+                <div class="gallery_layer">
+                    <div class="gallery_layer_name">sandwiches</div>
+                    <div class="gallery_layer_price">price 16$</div>
+                    <button type="button" class="gallery_layer_btn">other sandwiches</button>
+                </div>
+                <img src="images/sandwiches.jpg" alt="beefStroganof">
+            </div>
+            <div class="gallery_card">
+                <div class="gallery_layer">
+                    <div class="gallery_layer_name">pasta</div>
+                    <div class="gallery_layer_price">price 19$</div>
+                    <button type="button" class="gallery_layer_btn">other pastas</button>
+                </div>
+                <img src="images/pasta.jpg" alt="pasta">
+            </div>
+            <div class="gallery_card">
+                <div class="gallery_layer">
+                    <div class="gallery_layer_name">burger</div>
+                    <div class="gallery_layer_price">price 22$</div>
+                    <button type="button" class="gallery_layer_btn">other burgers</button>
+                </div>
+                <img src="images/burger.jpg" alt="burgar">
+            </div>
+            <div class="gallery_card">
+                <div class="gallery_layer">
+                    <div class="gallery_layer_name">pizza</div>
+                    <div class="gallery_layer_price">price 13$</div>
+                    <button type="button" class="gallery_layer_btn">other pizzas</button>
+                </div>
+                <img src="images/pizza.jpg" alt="pizza">
+            </div>
+            <div class="gallery_card">
+                <div class="gallery_layer">
+                    <div class="gallery_layer_name">soup</div>
+                    <div class="gallery_layer_price">price 20$</div>
+                    <button type="button" class="gallery_layer_btn">other soups</button>
+                </div>
+                <img src="images/soup.jpg" alt="soup">
+            </div>
+            <div class="gallery_card">
+                <div class="gallery_layer">
+                    <div class="gallery_layer_name">fried chicken</div>
+                    <div class="gallery_layer_price">price 14$</div>
+                    <button type="button" class="gallery_layer_btn">other fried chicken
+                    </button>
+                </div>
+                <img src="images/friedChicken.jpg" alt="chickenCurry">
+            </div>
+        </div>
+    </div>
+    <!--end gallery-->
+</main>
+<!--end main-->
+<!--start footer-->
+<footer class="footer" id="contact">
+    <div class="footer_container">
+        <!--start contact us-->
+        <div class="contact_us">
+            <h3>contact us</h3>
+            <form>
+                <label>
+                    <input type="text" placeholder="Name" name="username">
+                </label>
+                <label>
+                    <input type="email" placeholder="Email" name="email">
+                </label>
+                <label>
+                    <textarea placeholder="Message" rows="6"></textarea>
+                </label>
+                <button type="submit" name="send">send</button>
+            </form>
+        </div>
+        <!--end contact us-->
+        <!--start social media-->
+        <div class="footer_social_media">
+            <ul class="social_media">
+                <li class="social_media_item">
+                    <a href="#" class="social_media_link">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="social_media_item">
+                    <a href="#" class="social_media_link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social_media_item">
+                    <a href="#" class="social_media_link">
+                        <i class="fa fa-telegram"></i>
+                    </a>
+                </li>
+                <li class="social_media_item">
+                    <a href="#" class="social_media_link">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--end contact us-->
+    </div>
+    <div class="phone">
+        <a href="tel:00151516">
+            <span class="fa fa-phone"></span>
+        </a>
+    </div>
+</footer>
+<!--end footer-->
+<!--jQuery-->
+<script>
+    const menu = document.querySelector(".navbar_menu");
+    $(document).ready(function () {
+        $(".nav_icon").on('click', function () {
+            if (this.classList.contains("fa-bars")) {
+                this.classList = "fa fa-times nav_icon";
+                menu.style.right = "0";
+            } else {
+                this.classList = "fa fa-bars nav_icon";
+                menu.style.right = "-100%";
+            }
+        });
+    });
+</script>
+</body>
+</html>

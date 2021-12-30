@@ -1,0 +1,380 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)), url("../images/background-header.jpg") center no-repeat fixed;
+  background-size: cover;
+
+  &-container {
+    max-width: 1280px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  padding: 12px 24px;
+
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  height: 100%;
+  right: -100%;
+  padding: 20px;
+  background: $color-dark;
+  transition: 0.5s;
+
+  img {
+    display: block;
+    width: 20vw;
+    border-radius: 10px;
+    margin-top: 30px;
+    animation: swing 2s infinite;
+  }
+
+  &_item {
+    list-style: none;
+    margin: 18px 12px 22px 0;
+  }
+
+  &_link {
+    @include textStyle(capitalize, 16px);
+    color: $color-white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: $color-secondary;
+      border-bottom: 1px solid $color-secondary;
+      font-size: 20px;
+    }
+    &--active {
+      @include textStyle(uppercase, 20px);
+      color: $color-secondary;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav_bar {
+  font-size: 30px;
+  color: $color-secondary;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.brand {
+  @include flexLayout;
+  @include center(20%);
+  @media only screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    top: 13%;
+  }
+
+  .logo {
+    @include flexLayout;
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    @media only screen and (max-width: 992px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.logo_name {
+  @include textStyle(uppercase, 16px);
+  color: $color-primary;
+  font-family: $font-openSansCondense;
+  @media only screen and (min-height: 768px) and (max-width: 1280px) {
+    font-size: 16px;
+  }
+  @media only screen and (min-height: 480px) and (max-width: 768px) {
+    font-size: 10px;
+  }
+  @media only screen and (min-height: 320px) and (max-width: 480px) {
+    font-size: 7px;
+  }
+}
+
+.banner_heading {
+  @include center(100px);
+
+  .banner_main {
+    @include textStyle(uppercase, 35px);
+    color: $color-secondary;
+    font-family: $font-vujahdayScript;
+    font-weight: 800;
+    margin-top: 300px;
+  }
+
+  .banner_sub {
+    @include textStyle(uppercase, 20px);
+    color: $color-primary;
+    font-family: $font-openSansCondense;
+    @media only screen and (min-height: 320px) and (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.header_btn {
+  @include flexLayout;
+  @include center(420px);
+
+  button {
+    @include textStyle(capitalize, 16px);
+    @include button($color-white);
+
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+
+  &_container {
+    max-width: 1280px;
+
+    .about_us {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 80px;
+      @media only screen and (min-height: 320px) and (max-width: 480px) {
+        padding: 20px;
+      }
+
+      &_left {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        h3 {
+          @include textStyle(uppercase, 22px);
+          color: $color-secondary;
+          font-family: $font-openSansCondense;
+          margin-bottom: 20px;
+          border-bottom: 2px solid $color-secondary;
+          display: none;
+          @media only screen and (max-width: 768px) {
+            display: block;
+          }
+        }
+
+        h5 {
+          font-size: 18px;
+          padding-bottom: 8px;
+          text-align: center;
+          @media only screen and (min-height: 320px) and (max-width: 480px) {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+
+      &_right {
+        width: 250px;
+        height: 250px;
+        @media only screen and (max-width: 768px) {
+          display: none;
+        }
+
+        img {
+          @include img;
+        }
+      }
+    }
+  }
+}
+
+.gallery .gallery_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery_card {
+  width: 33.333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+
+  &:hover .gallery_layer {
+    top: 0;
+  }
+
+  img {
+    @include img;
+    object-fit: cover;
+  }
+}
+
+.gallery_layer {
+  @include flexLayout;
+  @include img;
+  position: absolute;
+  top: 100%;
+  flex-direction: column;
+  background: rgba($color-secondary, .5);
+  transition: 0.5s;
+
+  &_name {
+    @include textStyle(capitalize, 30px);
+    font-family: $font-vujahdayScript;
+    color: $color-black;
+    font-weight: 700;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &_price {
+    @include textStyle(capitalize, 16px);
+    color: $color-black;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &_btn {
+    @include textStyle(capitalize, 16px);
+    margin-top: 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    @media only screen and (max-width: 768px) {
+      width: 93px;
+      font-size: 10px;
+    }
+  }
+}
+
+.footer {
+  background: $color-primary;
+  width: 100%;
+  padding: 30px 0;
+
+  &_container {
+    max-width: 1280px;
+  }
+
+  .contact_us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+
+    h3 {
+      @include textStyle(uppercase, 22px);
+      font-family: $font-openSansCondense;
+      color: $color-secondary;
+      border-bottom: 2px solid $color-secondary;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      border: 0;
+      outline: 0;
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      resize: none;
+    }
+
+    button {
+      @include textStyle(capitalize, 16px);
+      @include button($color-dark);
+
+      &:hover {
+        background: $color-secondary;
+      }
+    }
+  }
+
+  .social_media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    &_item {
+      list-style: none;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.4);
+      }
+    }
+
+    &_link {
+      color: $color-dark;
+      text-decoration: none;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 15px;
+      transition: 0.5s;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .phone {
+    background: $color-dark;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 200;
+    padding: 10px;
+    border-radius: 50%;
+
+    a {
+      color: $color-white;
+      font-size: 30px;
+
+      .fa {
+        animation: tada 2s infinite;
+      }
+    }
+  }
+}
+

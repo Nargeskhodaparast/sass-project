@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../images/background-header.jpg") center no-repeat fixed;
+  background-size: cover;
+}
+.header-container {
+  max-width: 1280px;
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  padding: 12px 24px;
+}
+.navbar_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  height: 100%;
+  right: -100%;
+  padding: 20px;
+  background: #4f4f4f;
+  transition: 0.5s;
+}
+.navbar_menu img {
+  display: block;
+  width: 20vw;
+  border-radius: 10px;
+  margin-top: 30px;
+  animation: swing 2s infinite;
+}
+.navbar_menu_item {
+  list-style: none;
+  margin: 18px 12px 22px 0;
+}
+.navbar_menu_link {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navbar_menu_link:hover {
+  color: #9CAF66;
+  border-bottom: 1px solid #9CAF66;
+  font-size: 20px;
+}
+.navbar_menu_link--active {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #9CAF66;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav_bar {
+  font-size: 30px;
+  color: #9CAF66;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 992px) {
+  .brand {
+    display: flex;
+    flex-direction: column;
+    top: 13%;
+  }
+}
+.brand .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  user-select: none;
+}
+@media only screen and (max-width: 992px) {
+  .brand .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.logo_name {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ddd;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@media only screen and (min-height: 768px) and (max-width: 1280px) {
+  .logo_name {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-height: 480px) and (max-width: 768px) {
+  .logo_name {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-height: 320px) and (max-width: 480px) {
+  .logo_name {
+    font-size: 7px;
+  }
+}
+
+.banner_heading {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, -50%);
+}
+.banner_heading .banner_main {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #9CAF66;
+  font-family: "Vujahday Script", cursive;
+  font-weight: 800;
+  margin-top: 300px;
+}
+.banner_heading .banner_sub {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ddd;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@media only screen and (min-height: 320px) and (max-width: 480px) {
+  .banner_heading .banner_sub {
+    font-size: 16px;
+  }
+}
+
+.header_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 420px;
+  transform: translate(-50%, -50%);
+}
+.header_btn button {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  outline: 0;
+  padding: 8px 5px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #9CAF66;
+  transition: 0.3s;
+}
+.header_btn button:hover {
+  background: #9CAF66;
+}
+
+.main {
+  width: 100%;
+}
+.main_container {
+  max-width: 1280px;
+}
+.main_container .about_us {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 80px;
+}
+@media only screen and (min-height: 320px) and (max-width: 480px) {
+  .main_container .about_us {
+    padding: 20px;
+  }
+}
+.main_container .about_us_left {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 768px) {
+  .main_container .about_us_left {
+    width: 100%;
+  }
+}
+.main_container .about_us_left h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #9CAF66;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #9CAF66;
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .main_container .about_us_left h3 {
+    display: block;
+  }
+}
+.main_container .about_us_left h5 {
+  font-size: 18px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+@media only screen and (min-height: 320px) and (max-width: 480px) {
+  .main_container .about_us_left h5 {
+    font-size: 16px;
+  }
+}
+.main_container .about_us_left p {
+  font-size: 16px;
+  text-align: center;
+}
+.main_container .about_us_right {
+  width: 250px;
+  height: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .main_container .about_us_right {
+    display: none;
+  }
+}
+.main_container .about_us_right img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .gallery_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery_card {
+  width: 33.333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+.gallery_card:hover .gallery_layer {
+  top: 0;
+}
+.gallery_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery_layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  flex-direction: column;
+  background: rgba(156, 175, 102, 0.5);
+  transition: 0.5s;
+}
+.gallery_layer_name {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-family: "Vujahday Script", cursive;
+  color: #000;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .gallery_layer_name {
+    display: none;
+  }
+}
+.gallery_layer_price {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+  .gallery_layer_price {
+    display: none;
+  }
+}
+.gallery_layer_btn {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  margin-top: 15px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .gallery_layer_btn {
+    width: 93px;
+    font-size: 10px;
+  }
+}
+
+.footer {
+  background: #ddd;
+  width: 100%;
+  padding: 30px 0;
+}
+.footer_container {
+  max-width: 1280px;
+}
+.footer .contact_us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+}
+.footer .contact_us h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #9CAF66;
+  border-bottom: 2px solid #9CAF66;
+  margin-bottom: 20px;
+}
+.footer .contact_us input, .footer .contact_us textarea {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  resize: none;
+}
+.footer .contact_us button {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  outline: 0;
+  padding: 8px 5px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #4f4f4f;
+  background: transparent;
+  border: 2px solid #9CAF66;
+  transition: 0.3s;
+}
+.footer .contact_us button:hover {
+  background: #9CAF66;
+}
+.footer .social_media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .social_media_item {
+  list-style: none;
+  transition: 0.5s;
+}
+.footer .social_media_item:hover {
+  transform: scale(1.4);
+}
+.footer .social_media_link {
+  color: #4f4f4f;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.5s;
+}
+.footer .social_media_link:hover {
+  color: #9CAF66;
+}
+.footer .phone {
+  background: #4f4f4f;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 200;
+  padding: 10px;
+  border-radius: 50%;
+}
+.footer .phone a {
+  color: #fff;
+  font-size: 30px;
+}
+.footer .phone a .fa {
+  animation: tada 2s infinite;
+}
+
+/*# sourceMappingURL=main.css.map */
